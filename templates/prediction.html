@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="/static/styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js" integrity="sha512-BqNYFBAzGfZDnIWSAEGZSD/QFKeVxms2dIBPfw11gZubWwKUjEgmFUtUls8vZ6xTRZN/jaXGHD/ZaxD9+fDo0A==" crossorigin="anonymous"></script>
+    <title>Prediction</title>
+    <style>
+      .s{
+        padding: 20px auto 20px auto;
+        margin-bottom: 20px;
+      }
+      .d{
+        font-size: 3rem;
+      }
+        
+.result{
+  text-align: center;
+}
+.final{
+  color: rgb(5, 212, 5);
+}
+.disclaimer{
+  color: #dc3545;
+}
+.container{
+    text-align: center;
+}
+.imgg{
+  width: 100%;
+
+}
+    </style>
+</head>
+<body>
+    
+    <div class="card result">
+        <div class="card-header"><h3>Todays Closing Price Prediction for {{k}}</h3></div>
+        <div class="card-body">
+          <h5 class="card-title"><h1 class="final">{{hell}}</h1></h5>
+          <p class="card-text">
+            <Span class="disclaimer"><strong>Disclaimer: </strong>The price shown here is predicted by our MACHINE LEARNING algorithm and need not to be accurate. We are not responsible for any money loose. Plan accordingly.</Span> 
+          </p>
+          <a href="index.html" class="btn btn-outline-secondary">Go to Home page</a>
+        </div>
+      </div>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <img class="imgg" src="/static/images/plotdata/{{k}}.png" alt="{{k}}.png">
+          <!-- <h3 class="display-4">Download the graphical representation of stock prediction for {{k}} in .png format below</h3>-->
+          <p class="lead">Download graphical representation in .png format below</p> 
+        </div>
+      </div>
+        <div class="result "><a type="submit" href="/static/images/plotdata/{{k}}.png" download class="btn btn-outline-success s "><span class="d">DOWNLOAD</span></a>
+        </div>
+</body>
+</html>
