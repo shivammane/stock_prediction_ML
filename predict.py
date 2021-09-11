@@ -12,7 +12,7 @@ from keras.layers import LSTM
 from keras.layers import Dropout
 
 
-def hello(g):
+def price(g):
     plt.subplots(figsize=(12, 4))
     dataset = pd.read_csv(f"static/{g}", index_col="Date", parse_dates=True)
     dataset["Close Price"] = dataset["Close Price"].replace(',', '').astype(float)
