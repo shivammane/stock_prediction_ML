@@ -21,4 +21,4 @@ def predic():
 
 
 if __name__ == "__main__":
-    app.run(host='192.168.43.124', debug=True)
+    app.run(host='127.0. 0.1', debug=True)
